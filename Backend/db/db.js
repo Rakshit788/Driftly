@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const dbpassword  = 'mongodb+srv://Uber:uberpass@cluster0.bnvlk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+const dbpassword  = process.env.MONGO_URL ;
 function connectToDb() {
     mongoose.connect(dbpassword
     ).then(() => {
